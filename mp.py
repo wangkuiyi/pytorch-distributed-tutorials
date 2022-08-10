@@ -7,7 +7,7 @@ import sys
 
 def hello(rank: int):
     print(f"hello, rank {rank}!")
-    sys.stdout.flush()
+    sys.stdout.flush()  # must-to-have, or prints nothing.
 
 if __name__ == '__main__':
     torch.multiprocessing.spawn(hello, nprocs=2)
